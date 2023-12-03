@@ -10,7 +10,7 @@ function App() {
  const [number, setNumber] =useState(0);
  const handleClick= async() =>{
   try {
-    const data = await updateFavNumber([number]);
+    const data = await updateFavNumber({ args: [number] });
     console.info("contract call successs", data);
   } catch (err) {
     console.error("contract call failure", err);
@@ -21,7 +21,7 @@ function App() {
     <>
     <ConnectWallet />
      <h2>My Fav Number:{isLoading ? <span>Loading...</span> : favNumber.toString()}</h2>
-     <input type="number" onChange={(e)=>(
+     <input placeholder="enter fav number" type="number" onChange={(e)=>(
       setNumber(e.target.value)
      )}/>
      <button onClick={handleClick}>Update</button>
