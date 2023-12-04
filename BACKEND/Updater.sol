@@ -8,4 +8,7 @@ contract Updater{
     function updateFavNumber(uint256 _favNumber) public{
         favNumber = _favNumber;
     }
+     function getFavNumber() public view returns (uint256) {
+        return favNumber;
+    }
 }
