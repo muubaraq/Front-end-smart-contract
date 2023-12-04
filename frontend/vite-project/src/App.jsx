@@ -1,35 +1,4 @@
-// import {useState} from 'react';
-// import { useContract, useContractRead, useContractWrite, ConnectWallet } from "@thirdweb-dev/react";
-// import './App.css';
 
-// function App() {
-//   const { contract } = useContract("0x4C33899e8DB3A9fFA613212F5758Da26dB47231e");
-//   const { data:favNumber, isLoading } = useContractRead(contract, "favNumber", "getFavNumber")
-//   const { mutateAsync: updateFavNumber} = useContractWrite(contract, "updateFavNumber")
-
-//  const [number, setNumber] =useState(0);
-//  const handleClick= async() =>{
-//   try {
-//     const data = await updateFavNumber({ args: [number] });
-//     console.info("contract call successs", data);
-//   } catch (err) {
-//     console.error("contract call failure", err);
-//   }
-//  }
-
-//   return (
-//     <>
-//     <ConnectWallet />
-//      <h2>My Fav Number:{isLoading ? <span>Loading...</span> : favNumber.toString()}</h2>
-//      <input placeholder="enter fav number" type="number" onChange={(e)=>(
-//       setNumber(e.target.value)
-//      )}/>
-//      <button onClick={handleClick}>Update</button>
-//     </>
-//   )
-// }
-
-// export default App
 import {useState} from 'react';
 import { useContract, useContractRead, useContractWrite, ConnectWallet } from "@thirdweb-dev/react";
 import './App.css';
